@@ -1,0 +1,2049 @@
+{
+  "scanned_at": 1780231840.5377445,
+  "total_files": 140,
+  "suspicious_count": 70,
+  "suspicious": [
+    {
+      "path": "assets/audio/en/apple.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/book.mp3",
+      "size": 28,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (28 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/chair.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/door.mp3",
+      "size": 28,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (28 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/garden.mp3",
+      "size": 30,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (30 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/house.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/school.mp3",
+      "size": 30,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (30 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/tree.mp3",
+      "size": 28,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (28 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/water.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/window.mp3",
+      "size": 30,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (30 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/apple.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Apple.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/book.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Book.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/chair.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Chair.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/door.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Door.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/garden.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Garden.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/house.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/House.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/school.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/School.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/tree.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Tree.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/water.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Water.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/window.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Window.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/apple.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Apple.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/book.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Book.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/chair.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Chair.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/door.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Door.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/garden.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Garden.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/house.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/House.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/school.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/School.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/tree.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Tree.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/water.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Water.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/window.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Window.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/apple.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Apple.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/book.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Book.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/chair.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Chair.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/door.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Door.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/garden.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Garden.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/house.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/House.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/school.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/School.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/tree.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Tree.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/water.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Water.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/window.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Window.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/audio/en/apple.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Apple.wav",
+      "size": 55586,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/book.mp3",
+      "size": 28,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (28 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Book.wav",
+      "size": 56026,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/chair.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Chair.wav",
+      "size": 57790,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/door.mp3",
+      "size": 28,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (28 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Door.wav",
+      "size": 55364,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/garden.mp3",
+      "size": 30,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (30 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Garden.wav",
+      "size": 63964,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/house.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/House.wav",
+      "size": 59334,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/school.mp3",
+      "size": 30,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (30 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/School.wav",
+      "size": 62862,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/tree.mp3",
+      "size": 28,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (28 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Tree.wav",
+      "size": 54042,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/water.mp3",
+      "size": 29,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (29 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Water.wav",
+      "size": 57128,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/en/window.mp3",
+      "size": 30,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (30 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/en/Window.wav",
+      "size": 56908,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/apple.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Apple.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/book.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Book.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/chair.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Chair.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/door.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Door.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/garden.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Garden.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/house.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/House.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/school.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/School.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/tree.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Tree.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/u915u93fu924u93eu92c.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u915u941u930u94du938u940.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u916u93fu921u93cu915u940.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u918u930.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u926u930u935u93eu91cu93cu93e.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u92au93eu928u940.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u92au947u921u93c.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u92cu917u940u91au93e.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u938u947u92c.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/u938u94du915u942u932.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/water.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Water.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/window.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/Window.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/hi/extras/u915u93fu924u93eu92c.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u915u941u930u94du938u940.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u916u93fu921u93cu915u940.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u918u930.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u926u930u935u93eu91cu93cu93e.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u92au93eu928u940.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u92au947u921u93c.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u92cu917u940u91au93e.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u938u947u92c.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/hi/extras/u938u94du915u942u932.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/apple.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Apple.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/book.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Book.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/chair.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Chair.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/door.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Door.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/garden.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Garden.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/house.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/House.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/school.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/School.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/tree.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Tree.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/uc8fucaaucb2uccd.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/uc95ucbfuc9fuc95ucbf.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/uc95ucc1ucb0uccduc9aucbf.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/uca4uccbuc9f.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/uca6uccducb5ucbeucb0.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/uca8ucc0ucb0ucbfuca8.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/ucaaucc1ucb8uccduca4uc95.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/ucaeuca8ucc6.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/ucaeucb0.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/ucb6ucbeucb2ucc6.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/water.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Water.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/window.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/Window.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/kn/extras/uc8fucaaucb2uccd.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/uc95ucbfuc9fuc95ucbf.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/uc95ucc1ucb0uccduc9aucbf.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/uca4uccbuc9f.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/uca6uccducb5ucbeucb0.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/uca8ucc0ucb0ucbfuca8.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/ucaaucc1ucb8uccduca4uc95.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/ucaeuca8ucc6.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/ucaeucb0.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/kn/extras/ucb6ucbeucb2ucc6.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/apple.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Apple.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/book.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Book.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/chair.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Chair.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/door.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Door.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/garden.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Garden.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/house.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/House.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/school.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/School.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/tree.mp3",
+      "size": 21,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (21 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Tree.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/uc06uc2auc3fuc32uc4d.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc07uc32uc4duc32uc41.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc15uc3fuc1fuc3fuc15uc40.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc15uc41uc30uc4duc1auc40.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc1auc46uc1fuc4duc1fuc41.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc24uc4buc1f.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc26uc4duc35uc3euc30uc02.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc28uc40uc30uc41.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc2auc3euc20uc36uc3euc32.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/uc2auc41uc38uc4duc24uc15uc02.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/water.mp3",
+      "size": 22,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (22 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Water.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/window.mp3",
+      "size": 23,
+      "ext": "mp3",
+      "detected": "unknown",
+      "ok": false,
+      "notes": [
+        "extension mp3 but header=unknown",
+        "size small (23 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/Window.wav",
+      "size": 46,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": false,
+      "notes": [
+        "size small (46 bytes)"
+      ]
+    },
+    {
+      "path": "assets/audio/te/extras/uc06uc2auc3fuc32uc4d.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc07uc32uc4duc32uc41.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc15uc3fuc1fuc3fuc15uc40.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc15uc41uc30uc4duc1auc40.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc1auc46uc1fuc4duc1fuc41.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc24uc4buc1f.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc26uc4duc35uc3euc30uc02.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc28uc40uc30uc41.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc2auc3euc20uc36uc3euc32.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    },
+    {
+      "path": "assets/audio/te/extras/uc2auc41uc38uc4duc24uc15uc02.wav",
+      "size": 11068,
+      "ext": "wav",
+      "detected": "wav",
+      "ok": true,
+      "notes": []
+    }
+  ]
+}

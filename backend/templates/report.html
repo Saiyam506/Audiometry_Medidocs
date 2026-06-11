@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Audiometry Report</title>
+
+    <style>
+        @page {
+            size: A4 landscape;
+            margin: 8mm;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            color: #172033;
+            background: #ffffff;
+            font-size: 12px;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .top-header {
+            margin-bottom: 10px;
+        }
+
+        .brand-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 10px;
+            padding: 10px 12px;
+            border: 1px solid #dbe5ef;
+            border-radius: 10px;
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+        }
+
+        .brand-copy {
+            color: #172033;
+            font-size: 11px;
+            line-height: 1.35;
+        }
+
+        .brand-copy strong {
+            display: block;
+            color: #123d86;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .header-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .header-table td {
+            vertical-align: top;
+        }
+
+        .logo-cell {
+            width: 45%;
+        }
+
+        .logo-stack {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .logo-img {
+            max-height: 42px;
+            width: auto;
+        }
+
+        .patient-card {
+            border: 1px solid #dbe5ef;
+            border-radius: 8px;
+            background: #f8fbff;
+            padding: 8px 10px;
+            color: #374151;
+        }
+
+        .patient-card-title {
+            margin: 0 0 6px;
+            color: #123d86;
+            font-size: 10px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+        }
+
+        .patient-grid {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 10px;
+            line-height: 1.25;
+        }
+
+        .patient-grid td {
+            padding: 2px 6px 2px 0;
+            white-space: nowrap;
+        }
+
+        .patient-grid td:last-child {
+            padding-right: 0;
+        }
+
+        .report-title {
+            text-align: center;
+            margin: 0 0 12px;
+            font-size: 28px;
+            line-height: 1;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .title-mark {
+            color: #b7c7df;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 0 18px;
+            vertical-align: 3px;
+        }
+
+        .meta-row {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+            color: #4b5563;
+            font-size: 10px;
+        }
+
+        .meta-row td {
+            padding: 5px 8px;
+            border: 1px solid #e2e8f0;
+            background: #f8fbff;
+        }
+
+        .layout {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px;
+            height: 100%;
+        }
+
+        .layout td {
+            vertical-align: top;
+            height: 100%;
+        }
+
+        .card {
+            border: 1px solid #d9e2ee;
+            border-radius: 9px;
+            background: #ffffff;
+            box-shadow: 0 1px 6px rgba(15, 23, 42, 0.06);
+            padding: 16px;
+            height: 100%;
+        }
+
+        .card-title {
+            margin: 0 0 12px;
+            text-align: center;
+            color: #123d86;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.2px;
+        }
+
+        .score-card {
+            min-height: 400px;
+            text-align: center;
+            border-color: #cfead8;
+            background: linear-gradient(180deg, #fbfffc 0%, #ffffff 100%);
+        }
+
+        .score-label {
+            color: #149a42;
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .score-number {
+            margin-top: 14px;
+            font-size: 64px;
+            line-height: 1;
+            color: #169b43;
+            font-weight: 900;
+        }
+
+        .score-status {
+            margin: 8px 0 16px;
+            font-size: 22px;
+            color: #149a42;
+            font-weight: 800;
+        }
+
+        .bar-bg {
+            height: 15px;
+            border-radius: 999px;
+            background: #e8edf3;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 15px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, #169b43, #18aa4b);
+        }
+
+        .bar-labels {
+            width: 100%;
+            margin-top: 10px;
+            color: #526174;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .score-reference {
+            margin-top: 26px;
+            border: 1px solid #e1e7ef;
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        .reference-title {
+            margin-bottom: 10px;
+            color: #7b8797;
+            font-size: 9px;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .reference-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 7px 0;
+            font-size: 10px;
+            text-align: center;
+        }
+
+        .reference-table td {
+            border: 1px solid #dfe7ef;
+            border-radius: 4px;
+            padding: 7px 4px;
+            font-weight: 700;
+        }
+
+        .ref-good {
+            background: #e8f9ef;
+            color: #15803d;
+        }
+
+        .ref-average {
+            background: #fff6d8;
+            color: #b7791f;
+        }
+
+        .ref-loss {
+            background: #ffe9ea;
+            color: #d83b45;
+        }
+
+        .audiogram-card {
+            min-height: 400px;
+        }
+
+        .audiogram {
+            display: block;
+            width: 100%;
+            height: 272px;
+        }
+
+        .summary-card {
+            min-height: 260px;
+        }
+
+        .pta-values {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .pta-values td {
+            width: 50%;
+            padding: 0 10px;
+        }
+
+        .pta-values td:first-child {
+            border-right: 2px solid #e1e7ef;
+        }
+
+        .ear-label-left,
+        .ear-label-right {
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .ear-label-left {
+            color: #2563eb;
+        }
+
+        .ear-label-right {
+            color: #ef4444;
+        }
+
+        .pta-number-left,
+        .pta-number-right {
+            margin: 4px 0 8px;
+            font-size: 23px;
+            font-weight: 900;
+        }
+
+        .pta-number-left {
+            color: #2563eb;
+        }
+
+        .pta-number-right {
+            color: #ef4444;
+        }
+
+        .status-pill {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            background: #e8f9ef;
+            color: #15803d;
+            border: 1px solid #c9eed6;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .pta-reference {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 3px 0;
+            text-align: center;
+            font-size: 9px;
+        }
+
+        .pta-reference td {
+            border: 1px solid #e3e9f0;
+            border-radius: 3px;
+            padding: 6px 3px;
+            font-weight: 700;
+        }
+
+        .pta-normal {
+            background: #e8f9ef;
+            color: #15803d;
+        }
+
+        .pta-mild {
+            background: #fff6d8;
+            color: #b7791f;
+        }
+
+        .pta-moderate {
+            background: #fff0df;
+            color: #c05621;
+        }
+
+        .pta-severe {
+            background: #ffe5eb;
+            color: #c02652;
+        }
+
+        .pta-profound {
+            background: #f0e7ff;
+            color: #7c3aed;
+        }
+
+        .readings-card {
+            min-height: 260px;
+        }
+
+        .readings-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 13px;
+            overflow: hidden;
+            border-radius: 7px;
+        }
+
+        .readings-table th {
+            background: #123d86;
+            color: #ffffff;
+            padding: 10px 8px;
+            font-size: 12px;
+        }
+
+        .readings-table td {
+            border: 1px solid #dde5ef;
+            padding: 9px 8px;
+            color: #334155;
+        }
+
+        .interpretation {
+            margin: 8px 10px 0;
+            border: 1px solid #cbd8e8;
+            border-radius: 9px;
+            background: linear-gradient(180deg, #edf5ff 0%, #dce7f4 100%);
+            padding: 18px 20px;
+            min-height: 110px;
+        }
+
+        .interpretation-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .interpretation-table td {
+            vertical-align: middle;
+            padding: 0 18px;
+            border-left: 1px solid #c7d3e3;
+            color: #1f2937;
+            font-size: 13px;
+            line-height: 1.25;
+        }
+
+        .interpretation-table td:first-child {
+            width: 92px;
+            border-left: none;
+            text-align: center;
+            padding-left: 0;
+        }
+
+        .interp-icon {
+            display: inline-block;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #0d4eaa;
+            color: #ffffff;
+            line-height: 56px;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .check {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            border-radius: 50%;
+            background: #169b43;
+            color: #ffffff;
+            line-height: 14px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 800;
+        }
+
+        .wrs-title {
+            margin: 0 0 16px;
+            text-align: center;
+            font-size: 26px;
+        }
+
+        .wrs-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        .wrs-table th,
+        .wrs-table td {
+            border: 1px solid #cfd8e3;
+            padding: 8px;
+        }
+
+        .wrs-table th {
+            background: #123d86;
+            color: #ffffff;
+        }
+
+        .wrs-row-correct {
+            background-color: #e8f5e9;
+        }
+
+        .wrs-row-wrong {
+            background-color: #ffebee;
+        }
+
+        .wrs-result-correct {
+            color: #1b5e20;
+            font-weight: 800;
+        }
+
+        .wrs-result-wrong {
+            color: #b71c1c;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    {% set _score = pta_overall_score if pta_overall_score is defined and pta_overall_score is not none else
+    overall_score %}
+    {% set _status = pta_overall_status if pta_overall_status is defined and pta_overall_status else hearing_status %}
+    {% set _freqs = ["500", "1000", "2000", "4000"] %}
+    {% set _cx = [72, 172, 272, 372] %}
+    {% set _ct = 42 %}
+    {% set _dpm = 2.05 %}
+
+    <div class="top-header">
+        <div class="brand-header">
+            <div class="brand-copy">
+                <strong>Healthcare at Medidocs Pvt Ltd</strong>
+                info@medidocs.in | +91 6366677010<br />
+                1st floor, 27th Cross Rd, 6th Block,<br />
+                Jayanagar, Bengaluru, Karnataka 560011
+            </div>
+            <div class="logo-stack">
+                <img src="{{ nabl_logo }}" class="logo-img" alt="NABL Logo" />
+                <img src="{{ medilabs_logo }}" class="logo-img" alt="Medilabs Logo" />
+            </div>
+        </div>
+
+        <div class="patient-card">
+            <div class="patient-card-title">Patient Information</div>
+            <table class="patient-grid">
+                <tr>
+                    <td><strong>UHID:</strong> {{ user_data.uhid }}</td>
+                    <td><strong>Name:</strong> {{ user_data.name }}</td>
+                    <td><strong>Age:</strong> {{ user_data.age }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Gender:</strong> {{ user_data.gender }}</td>
+                    <td><strong>Mobile:</strong> {{ user_data.mobile }}</td>
+                    <td><strong>Blood Group:</strong> {{ user_data.blood }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Emp ID:</strong> {{ user_data.emp_id }}</td>
+                    <td><strong>Kit No:</strong> {{ user_data.kit_no }}</td>
+                    <td><strong>Date:</strong> {{ date_time }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="report-title">
+        <span class="title-mark">-|||--</span>Audiometry Report<span class="title-mark">--|||-</span>
+    </div>
+
+    <table class="meta-row">
+        <tr>
+            <td><strong>Name:</strong> {{ user_data.name }}</td>
+            <td><strong>Age:</strong> {{ user_data.age }}</td>
+            <td><strong>Gender:</strong> {{ user_data.gender }}</td>
+            <td><strong>Date:</strong> {{ date_time }}</td>
+        </tr>
+    </table>
+
+    <table class="layout">
+        <tr>
+            <td style="width: 42%;">
+                <div class="card score-card">
+                    <div class="score-label">Overall Hearing Score</div>
+                    <div class="score-number">{{ _score }}</div>
+                    <div class="score-status">{{ _status }}</div>
+                    <div class="bar-bg">
+                        {{ score_bar_html|safe }}
+                    </div>
+                    <table class="bar-labels">
+                        <tr>
+                            <td style="text-align:left;">0</td>
+                            <td style="text-align:right;">100</td>
+                        </tr>
+                    </table>
+
+                    <div class="score-reference">
+                        <div class="reference-title">Score Reference</div>
+                        <table class="reference-table">
+                            <tr>
+                                <td class="ref-good">80-100<br>Excellent</td>
+                                <td class="ref-average">60-79<br>Average</td>
+                                <td class="ref-loss">0-59<br>Likely Hearing Loss</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </td>
+
+            <td style="width: 58%;">
+                <div class="card audiogram-card">
+                    <div class="card-title">Pure Tone Audiogram</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="audiogram" viewBox="0 0 500 315"
+                        preserveAspectRatio="xMidYMid meet">
+                        <text x="250" y="12" font-size="10" font-weight="700" fill="#172033"
+                            text-anchor="middle">Frequency (Hz)</text>
+                        <text x="26" y="20" font-size="10" fill="#172033">(dB HL)</text>
+
+                        <rect x="72" y="42" width="300" height="51.25" fill="#eaf8ed" />
+                        <rect x="72" y="93.25" width="300" height="30.75" fill="#fff7dc" />
+                        <rect x="72" y="124" width="300" height="30.75" fill="#fff0df" />
+                        <rect x="72" y="154.75" width="300" height="30.75" fill="#ffe8ef" />
+                        <rect x="72" y="185.5" width="300" height="41" fill="#ffd4e3" />
+                        <rect x="72" y="226.5" width="300" height="61.5" fill="#eadbff" />
+
+                        {% for _db in range(-10, 121, 10) %}
+                        <line x1="72" y1="{{ _ct + (_db + 10) * _dpm }}" x2="372" y2="{{ _ct + (_db + 10) * _dpm }}"
+                            stroke="#ccd6e2" stroke-width="0.6" />
+                        <text x="62" y="{{ _ct + (_db + 10) * _dpm + 4 }}" font-size="10" fill="#334155"
+                            text-anchor="end">{{ _db }}</text>
+                        {% endfor %}
+
+                        {% for _i in range(4) %}
+                        <line x1="{{ _cx[_i] }}" y1="42" x2="{{ _cx[_i] }}" y2="288" stroke="#ccd6e2"
+                            stroke-width="0.6" />
+                        {% endfor %}
+
+                        <rect x="72" y="42" width="300" height="246" fill="none" stroke="#b8c4d2" stroke-width="1" />
+
+                        <text x="72" y="305" font-size="10" fill="#334155" text-anchor="middle">500</text>
+                        <text x="172" y="305" font-size="10" fill="#334155" text-anchor="middle">1000</text>
+                        <text x="272" y="305" font-size="10" fill="#334155" text-anchor="middle">2000</text>
+                        <text x="372" y="305" font-size="10" fill="#334155" text-anchor="middle">4000</text>
+
+                        <text x="385" y="66" font-size="10" fill="#22a447">Normal</text>
+                        <text x="385" y="108" font-size="10" fill="#d99a18">Mild</text>
+                        <text x="385" y="142" font-size="10" fill="#f07825">Moderate</text>
+                        <text x="385" y="176" font-size="10" fill="#e45683">Mod. Severe</text>
+                        <text x="385" y="216" font-size="10" fill="#d9469b">Severe</text>
+                        <text x="385" y="263" font-size="10" fill="#8b5cf6">Profound</text>
+
+                        <polyline
+                            points="{{ _cx[0] }},{{ _ct + (right_values[_freqs[0]] + 10) * _dpm }} {{ _cx[1] }},{{ _ct + (right_values[_freqs[1]] + 10) * _dpm }} {{ _cx[2] }},{{ _ct + (right_values[_freqs[2]] + 10) * _dpm }} {{ _cx[3] }},{{ _ct + (right_values[_freqs[3]] + 10) * _dpm }}"
+                            fill="none" stroke="#ef4444" stroke-width="2" />
+                        <polyline
+                            points="{{ _cx[0] }},{{ _ct + (left_values[_freqs[0]] + 10) * _dpm }} {{ _cx[1] }},{{ _ct + (left_values[_freqs[1]] + 10) * _dpm }} {{ _cx[2] }},{{ _ct + (left_values[_freqs[2]] + 10) * _dpm }} {{ _cx[3] }},{{ _ct + (left_values[_freqs[3]] + 10) * _dpm }}"
+                            fill="none" stroke="#3b82f6" stroke-width="2" />
+
+                        {% for _i in range(4) %}
+                        <circle cx="{{ _cx[_i] }}" cy="{{ _ct + (right_values[_freqs[_i]] + 10) * _dpm }}" r="4.5"
+                            fill="white" stroke="#ef4444" stroke-width="2" />
+                        {% set _lx = _cx[_i] %}
+                        {% set _ly = _ct + (left_values[_freqs[_i]] + 10) * _dpm %}
+                        <line x1="{{ _lx - 5 }}" y1="{{ _ly - 5 }}" x2="{{ _lx + 5 }}" y2="{{ _ly + 5 }}"
+                            stroke="#3b82f6" stroke-width="2" />
+                        <line x1="{{ _lx - 5 }}" y1="{{ _ly + 5 }}" x2="{{ _lx + 5 }}" y2="{{ _ly - 5 }}"
+                            stroke="#3b82f6" stroke-width="2" />
+                        {% endfor %}
+
+                        <circle cx="202" cy="288" r="4" fill="white" stroke="#ef4444" stroke-width="2" />
+                        <text x="212" y="292" font-size="10" fill="#172033">Right Ear</text>
+                        <line x1="278" y1="283" x2="288" y2="293" stroke="#3b82f6" stroke-width="2" />
+                        <line x1="288" y1="283" x2="278" y2="293" stroke="#3b82f6" stroke-width="2" />
+                        <text x="296" y="292" font-size="10" fill="#172033">Left Ear</text>
+                    </svg>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="width: 42%;">
+                <div class="card summary-card">
+                    <div class="card-title">PTA Summary</div>
+                    <table class="pta-values">
+                        <tr>
+                            <td>
+                                <div class="ear-label-left">Left PTA</div>
+                                <div class="pta-number-left">{{ "%.1f"|format(left_pta) }} dB</div>
+                                <span class="status-pill">{{ left_status }}</span>
+                            </td>
+                            <td>
+                                <div class="ear-label-right">Right PTA</div>
+                                <div class="pta-number-right">{{ "%.1f"|format(right_pta) }} dB</div>
+                                <span class="status-pill">{{ right_status }}</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="reference-title">PTA Reference (dB HL)</div>
+                    <table class="pta-reference">
+                        <tr>
+                            <td class="pta-normal">0-25<br>Normal</td>
+                            <td class="pta-mild">26-40<br>Mild Loss</td>
+                            <td class="pta-moderate">41-55<br>Moderate Loss</td>
+                            <td class="pta-severe">56-70<br>Moderately Severe</td>
+                            <td class="pta-profound">71+<br>Severe / Profound</td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+
+            <td style="width: 58%;">
+                <div class="card readings-card">
+                    <div class="card-title">Frequency Readings (dB HL)</div>
+                    <table class="readings-table">
+                        <tr>
+                            <th>Frequency (Hz)</th>
+                            <th>Left Ear</th>
+                            <th>Right Ear</th>
+                        </tr>
+                        {% for _freq in _freqs %}
+                        <tr>
+                            <td>{{ _freq }} Hz</td>
+                            <td>{{ "%.2f"|format(left_values[_freq]) }}</td>
+                            <td>{{ "%.2f"|format(right_values[_freq]) }}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="interpretation">
+        <table class="interpretation-table">
+            <tr>
+                <td><span class="interp-icon">R</span></td>
+                {% for line in summary_lines %}
+                <td><span class="check">&#10003;</span>{{ line }}</td>
+                {% endfor %}
+            </tr>
+        </table>
+    </div>
+
+    {% if wrs_completed %}
+    <div class="page-break"></div>
+
+    <h1 class="wrs-title">Word Recognition Report</h1>
+
+    <table class="meta-row">
+        <tr>
+            <td><strong>Name:</strong> {{ user_data.name }}</td>
+            <td><strong>Language:</strong> {{ wrs_language|upper }}</td>
+            <td><strong>Date:</strong> {{ date_time }}</td>
+            <td><strong>Score:</strong> {{ correct_answers }}/{{ total_words }} ({{ wrs_percentage }}%)</td>
+        </tr>
+    </table>
+
+    <table class="wrs-table">
+        <tr>
+            <th>#</th>
+            <th>User Selected</th>
+            <th>Expected</th>
+            <th>Result</th>
+        </tr>
+        {% for row in wrs_detailed_rows %}
+        <tr class="{{ 'wrs-row-correct' if row.is_correct else 'wrs-row-wrong' }}">
+            <td style="text-align:center;">{{ row.index }}</td>
+            <td>{{ row.selected_word if row.selected_word else "Not selected" }}</td>
+            <td>{{ row.correct_word if row.correct_word else row.prompt_word }}</td>
+            <td class="{{ 'wrs-result-correct' if row.is_correct else 'wrs-result-wrong' }}" style="text-align:center;">
+                {{ "Correct" if row.is_correct else "Incorrect" }}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+</body>
+
+</html>
