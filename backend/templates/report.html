@@ -189,31 +189,67 @@
         }
 
         .score-card {
-            min-height: 400px;
+            min-height: 360px;
             text-align: center;
             border-color: #cfead8;
             background: linear-gradient(180deg, #fbfffc 0%, #ffffff 100%);
         }
 
         .score-label {
-            color: #149a42;
+            color: inherit;
             font-size: 14px;
             font-weight: 800;
             text-transform: uppercase;
+        }
+
+        .score-text-good {
+            color: #169b43;
+        }
+
+        .score-text-warn {
+            color: #d99a18;
+        }
+
+        .score-text-danger {
+            color: #d83b45;
+        }
+
+        .score-bar-fill.good {
+            background: #169b43;
+        }
+
+        .score-bar-fill.warn {
+            background: #d99a18;
+        }
+
+        .score-bar-fill.danger {
+            background: #d83b45;
+        }
+
+        .check.good {
+            background: #169b43;
+        }
+
+        .check.warn {
+            background: #d99a18;
+        }
+
+        .check.danger {
+            background: #d83b45;
         }
 
         .score-number {
             margin-top: 14px;
             font-size: 64px;
             line-height: 1;
-            color: #169b43;
+            color: inherit;
             font-weight: 900;
         }
 
         .score-status {
             margin: 8px 0 16px;
             font-size: 22px;
-            color: #149a42;
+            color: inherit;
             font-weight: 800;
         }
 
@@ -284,7 +320,7 @@
         }
 
         .audiogram-card {
-            min-height: 400px;
+            min-height: 340px;
         }
 
         .audiogram {
@@ -315,16 +351,12 @@
 
         .ear-label-left,
         .ear-label-right {
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        .ear-label-left {
             color: #2563eb;
         }
 
-        .ear-label-right {
-            color: #ef4444;
+        .pta-number-left,
+        .pta-number-right {
+            color: #2563eb;
         }
 
         .pta-number-left,
@@ -339,7 +371,7 @@
         }
 
         .pta-number-right {
-            color: #ef4444;
+            color: #2563eb;
         }
 
         .status-pill {
@@ -351,6 +383,36 @@
             border: 1px solid #c9eed6;
             font-size: 10px;
             font-weight: 800;
+        }
+
+        .status-pill.pta-normal {
+            background: #e8f9ef;
+            color: #15803d;
+            border: 1px solid #c9eed6;
+        }
+
+        .status-pill.pta-mild {
+            background: #fff6d8;
+            color: #b7791f;
+            border: 1px solid #f1dd96;
+        }
+
+        .status-pill.pta-moderate {
+            background: #fff0df;
+            color: #c05621;
+            border: 1px solid #f2c99c;
+        }
+
+        .status-pill.pta-severe {
+            background: #ffe5eb;
+            color: #c02652;
+            border: 1px solid #f5bfd0;
+        }
+
+        .status-pill.pta-profound {
+            background: #f0e7ff;
+            color: #7c3aed;
+            border: 1px solid #d7c1ff;
         }
 
         .pta-reference {
@@ -402,8 +464,12 @@
             border-collapse: collapse;
             text-align: center;
             font-size: 13px;
-            overflow: hidden;
-            border-radius: 7px;
+            border: 1px solid #dde5ef;
+        }
+
+        .readings-table th,
+        .readings-table td {
+            border: 1px solid #dde5ef;
         }
 
         .readings-table th {
@@ -420,30 +486,42 @@
         }
 
         .interpretation {
-            margin: 8px 10px 0;
-            border: 1px solid #cbd8e8;
+            margin-top: 8px;
+            border: 1px solid #d9e2ee;
             border-radius: 9px;
-            background: linear-gradient(180deg, #edf5ff 0%, #dce7f4 100%);
-            padding: 18px 20px;
-            min-height: 110px;
+            background: #ffffff;
+            box-shadow: 0 1px 6px rgba(15, 23, 42, 0.06);
+            padding: 12px 16px;
         }
 
         .interpretation-table {
             width: 100%;
+            height: 60px;
             border-collapse: collapse;
         }
 
         .interpretation-table td {
             vertical-align: middle;
-            padding: 0 18px;
-            border-left: 1px solid #c7d3e3;
+            padding: 0 10px;
+            position: relative;
             color: #1f2937;
-            font-size: 13px;
+            font-size: 14px;
+            font-weight: 500;
             line-height: 1.25;
         }
 
+        .interpretation-table td:not(:first-child)::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 15%;
+            height: 70%;
+            width: 1px;
+            background: #c7d3e3;
+        }
+
         .interpretation-table td:first-child {
-            width: 92px;
+            width: 60px;
             border-left: none;
             text-align: center;
             padding-left: 0;
@@ -463,15 +541,14 @@
 
         .check {
             display: inline-block;
-            width: 14px;
-            height: 14px;
+            width: 18px;
+            height: 18px;
             margin-right: 8px;
             border-radius: 50%;
-            background: #169b43;
-            color: #ffffff;
-            line-height: 14px;
+            color: white;
             text-align: center;
-            font-size: 10px;
+            line-height: 18px;
+            font-size: 11px;
             font-weight: 800;
         }
 
@@ -522,12 +599,27 @@
     {% set _score = pta_overall_score if pta_overall_score is defined and pta_overall_score is not none else
     overall_score %}
     {% set _status = pta_overall_status if pta_overall_status is defined and pta_overall_status else hearing_status %}
+    {% if _score >= 80 %}
+    {% set score_color = "#169b43" %}
+    {% set score_level = "good" %}
+    {% elif _score >= 60 %}
+    {% set score_color = "#d99a18" %}
+    {% set score_level = "warn" %}
+    {% else %}
+    {% set score_color = "#d83b45" %}
+    {% set score_level = "danger" %}
+    {% endif %}
     {% set _freqs = ["500", "1000", "2000", "4000"] %}
     {% set _cx = [72, 172, 272, 372] %}
     {% set _ct = 42 %}
-    {% set _dpm = 2.05 %}
-
-    <table width="100%" style="border-collapse: collapse;">
+    {% set _dpm = 2.25 %}
+    {% if left_pta <= 25 %} {% set left_pill_class="pta-normal" %} {% elif left_pta <=40 %} {% set
+        left_pill_class="pta-mild" %} {% elif left_pta <=55 %} {% set left_pill_class="pta-moderate" %} {% elif left_pta
+        <=70 %} {% set left_pill_class="pta-severe" %} {% else %} {% set left_pill_class="pta-profound" %} {% endif %}
+        {% if right_pta <=25 %} {% set right_pill_class="pta-normal" %} {% elif right_pta <=40 %} {% set
+        right_pill_class="pta-mild" %} {% elif right_pta <=55 %} {% set right_pill_class="pta-moderate" %} {% elif
+        right_pta <=70 %} {% set right_pill_class="pta-severe" %} {% else %} {% set right_pill_class="pta-profound" %}
+        {% endif %} <table width="100%" style="border-collapse: collapse;">
         <tr>
             <td style="width: 50%; vertical-align: top; font-size: 20px;">
                 Healthcare at Medidocs Pvt Ltd<br>
@@ -545,135 +637,173 @@
                 <img src="{{ medilabs_logo }}" width="250px">
             </td>
         </tr>
-    </table>
+        </table>
 
-    <div style="height: 20px;"></div>
+        <div style="height: 20px;"></div>
 
-    <table class="user-data-table">
-        <tr>
-            <td>UHID: {{ user_data.uhid }}</td>
-            <td colspan="3">Name: {{ user_data.name }}</td>
-        </tr>
-        <tr>
-            <td>Mobile: {{ user_data.mobile }}</td>
-            <td>Blood Group: {{ user_data.blood }}</td>
-            <td>Age: {{ user_data.age }}</td>
-            <td>Gender: {{ user_data.gender }}</td>
-        </tr>
-        <tr>
-            <td>Emp ID: {{ user_data.emp_id }}</td>
-            <td>Kit No: {{ user_data.kit_no }}</td>
-            <td colspan="2">Date: {{ date_time }}</td>
-        </tr>
-    </table>
+        <table class="user-data-table">
+            <tr>
+                <td>UHID: {{ user_data.uhid }}</td>
+                <td colspan="3">Name: {{ user_data.name }}</td>
+            </tr>
+            <tr>
+                <td>Mobile: {{ user_data.mobile }}</td>
+                <td>Blood Group: {{ user_data.blood }}</td>
+                <td>Age: {{ user_data.age }}</td>
+                <td>Gender: {{ user_data.gender }}</td>
+            </tr>
+            <tr>
+                <td>Emp ID: {{ user_data.emp_id }}</td>
+                <td>Kit No: {{ user_data.kit_no }}</td>
+                <td colspan="2">Date: {{ date_time }}</td>
+            </tr>
+        </table>
 
-    <div style="height: 10px;"></div>
+        <div style="height: 15px;"></div>
 
-    <div style="text-align: center; margin-bottom: 20px;">
-        <h1 style="margin: 0;">Audiometry Report</h1>
-    </div>
+        <div style="text-align: center; margin: 15px 0;">
+            <h1 style="margin: 0;">Audiometry Report</h1>
+        </div>
 
-    <table class="layout">
-        <tr>
-            <td style="width: 42%;">
-                <div class="card score-card">
-                    <div class="score-label">Overall Hearing Score</div>
-                    <div class="score-number">{{ _score }}</div>
-                    <div class="score-status">{{ _status }}</div>
-                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
-                        <tr>
-                            <td width="{{ _score }}%" style="background:#169b43; height:15px;"></td>
-                            <td width="{{ 100 - _score }}%" style="background:#e8edf3;"></td>
-                        </tr>
-                    </table>
-                    <table class="bar-labels">
-                        <tr>
-                            <td style="text-align:left;">0</td>
-                            <td style="text-align:right;">100</td>
-                        </tr>
-                    </table>
-
-                    <div class="score-reference">
-                        <div class="reference-title">Score Reference</div>
-                        <table class="reference-table">
+        <table class="layout">
+            <tr>
+                <td style="width: 42%;">
+                    <div class="card score-card">
+                        <div class="score-label score-text-{{ score_level }}">
+                            Overall Hearing Score
+                        </div>
+                        <div class="score-number score-text-{{ score_level }}">
+                            {{ _score }}
+                        </div>
+                        <div class="score-status score-text-{{ score_level }}">
+                            {{ _status }}
+                        </div>
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
                             <tr>
-                                <td class="ref-good">80-100<br>Excellent</td>
-                                <td class="ref-average">60-79<br>Average</td>
-                                <td class="ref-loss">0-59<br>Likely Hearing Loss</td>
-                            </tr>
-                        </table>
+                                <td width="{{ _score }}%" <td width="{{ _score }}%" bgcolor="{{ score_color }}"
+                                    style="height:16px;">
+                                </td>>
+                </td>
+
+                <td width="{{ 100 - _score }}%" style="height:16px;background:#e8edf3;">
+                </td>
+            </tr>
+        </table>
+        <table class="bar-labels">
+            <tr>
+                <td style="text-align:left;">0</td>
+                <td style="text-align:right;">100</td>
+            </tr>
+        </table>
+
+        <div class="score-reference">
+            <div class="reference-title">Score Reference</div>
+            <table class="reference-table">
+                <tr>
+                    <td class="ref-good">80-100<br>Excellent</td>
+                    <td class="ref-average">60-79<br>Average</td>
+                    <td class="ref-loss">0-59<br>Likely Hearing Loss</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+        </td>
+
+        <td style="width: 58%;">
+            <div class="card audiogram-card">
+                <div class="card-title">Pure Tone Audiogram</div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="audiogram" viewBox="0 0 500 315"
+                    preserveAspectRatio="xMidYMid meet">
+                    <text x="250" y="12" font-size="10" font-weight="700" fill="#172033" text-anchor="middle">Frequency
+                        (Hz)</text>
+                    <text x="26" y="20" font-size="10" fill="#172033">(dB HL)</text>
+
+                    <rect x="72" y="42" width="300" height="51.25" fill="#eaf8ed" />
+                    <rect x="72" y="93.25" width="300" height="30.75" fill="#fff7dc" />
+                    <rect x="72" y="124" width="300" height="30.75" fill="#fff0df" />
+                    <rect x="72" y="154.75" width="300" height="30.75" fill="#ffe8ef" />
+                    <rect x="72" y="185.5" width="300" height="41" fill="#ffd4e3" />
+                    <rect x="72" y="226.5" width="300" height="61.5" fill="#eadbff" />
+
+                    {% for _db in range(-10, 101, 10) %}
+                    <line x1="72" y1="{{ _ct + (_db + 10) * _dpm }}" x2="372" y2="{{ _ct + (_db + 10) * _dpm }}"
+                        stroke="#ccd6e2" stroke-width="0.6" />
+                    <text x="62" y="{{ _ct + (_db + 10) * _dpm + 4 }}" font-size="10" fill="#334155"
+                        text-anchor="end">{{
+                        _db }}</text>
+                    {% endfor %}
+
+                    {% for _i in range(4) %}
+                    <line x1="{{ _cx[_i] }}" y1="42" x2="{{ _cx[_i] }}" y2="288" stroke="#ccd6e2" stroke-width="0.6" />
+                    {% endfor %}
+
+                    <rect x="72" y="42" width="300" height="225" fill="none" stroke="#b8c4d2" stroke-width="1" />
+
+                    <text x="72" y="305" font-size="10" fill="#334155" text-anchor="middle">500</text>
+                    <text x="172" y="305" font-size="10" fill="#334155" text-anchor="middle">1000</text>
+                    <text x="272" y="305" font-size="10" fill="#334155" text-anchor="middle">2000</text>
+                    <text x="372" y="305" font-size="10" fill="#334155" text-anchor="middle">4000</text>
+
+                    <text x="385" y="66" font-size="10" fill="#22a447">Normal</text>
+                    <text x="385" y="108" font-size="10" fill="#d99a18">Mild</text>
+                    <text x="385" y="142" font-size="10" fill="#f07825">Moderate</text>
+                    <text x="385" y="176" font-size="10" fill="#e45683">Mod. Severe</text>
+                    <text x="385" y="216" font-size="10" fill="#d9469b">Severe</text>
+                    <text x="385" y="263" font-size="10" fill="#8b5cf6">Profound</text>
+
+                    <polyline
+                        points="{{ _cx[0] }},{{ _ct + (right_values[_freqs[0]] + 10) * _dpm }} {{ _cx[1] }},{{ _ct + (right_values[_freqs[1]] + 10) * _dpm }} {{ _cx[2] }},{{ _ct + (right_values[_freqs[2]] + 10) * _dpm }} {{ _cx[3] }},{{ _ct + (right_values[_freqs[3]] + 10) * _dpm }}"
+                        fill="none" stroke="#ef4444" stroke-width="2" />
+                    <polyline
+                        points="{{ _cx[0] }},{{ _ct + (left_values[_freqs[0]] + 10) * _dpm }} {{ _cx[1] }},{{ _ct + (left_values[_freqs[1]] + 10) * _dpm }} {{ _cx[2] }},{{ _ct + (left_values[_freqs[2]] + 10) * _dpm }} {{ _cx[3] }},{{ _ct + (left_values[_freqs[3]] + 10) * _dpm }}"
+                        fill="none" stroke="#3b82f6" stroke-width="2" />
+
+                    {% for _i in range(4) %}
+                    <circle cx="{{ _cx[_i] }}" cy="{{ _ct + (right_values[_freqs[_i]] + 10) * _dpm }}" r="4.5"
+                        fill="white" stroke="#ef4444" stroke-width="2" />
+                    {% set _lx = _cx[_i] %}
+                    {% set _ly = _ct + (left_values[_freqs[_i]] + 10) * _dpm %}
+                    <line x1="{{ _lx - 5 }}" y1="{{ _ly - 5 }}" x2="{{ _lx + 5 }}" y2="{{ _ly + 5 }}" stroke="#3b82f6"
+                        stroke-width="2" />
+                    <line x1="{{ _lx - 5 }}" y1="{{ _ly + 5 }}" x2="{{ _lx + 5 }}" y2="{{ _ly - 5 }}" stroke="#3b82f6"
+                        stroke-width="2" />
+                    {% endfor %}
+
+
+                </svg>
+                <div style="
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:10px;
+font-size:12px;
+font-weight:600;
+">
+
+                    <div>
+                        <span style="
+        display:inline-block;
+        width:10px;
+        height:10px;
+        border:2px solid #ef4444;
+        border-radius:50%;
+        margin-right:6px;
+    "></span>
+                        Right Ear
                     </div>
+
+                    <div>
+                        <span style="
+        color:#3b82f6;
+        font-size:14px;
+        margin-right:6px;
+    ">✕</span>
+                        Left Ear
+                    </div>
+
                 </div>
-            </td>
-
-            <td style="width: 58%;">
-                <div class="card audiogram-card">
-                    <div class="card-title">Pure Tone Audiogram</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="audiogram" viewBox="0 0 500 315"
-                        preserveAspectRatio="xMidYMid meet">
-                        <text x="250" y="12" font-size="10" font-weight="700" fill="#172033"
-                            text-anchor="middle">Frequency (Hz)</text>
-                        <text x="26" y="20" font-size="10" fill="#172033">(dB HL)</text>
-
-                        <rect x="72" y="42" width="300" height="51.25" fill="#eaf8ed" />
-                        <rect x="72" y="93.25" width="300" height="30.75" fill="#fff7dc" />
-                        <rect x="72" y="124" width="300" height="30.75" fill="#fff0df" />
-                        <rect x="72" y="154.75" width="300" height="30.75" fill="#ffe8ef" />
-                        <rect x="72" y="185.5" width="300" height="41" fill="#ffd4e3" />
-                        <rect x="72" y="226.5" width="300" height="61.5" fill="#eadbff" />
-
-                        {% for _db in range(-10, 121, 10) %}
-                        <line x1="72" y1="{{ _ct + (_db + 10) * _dpm }}" x2="372" y2="{{ _ct + (_db + 10) * _dpm }}"
-                            stroke="#ccd6e2" stroke-width="0.6" />
-                        <text x="62" y="{{ _ct + (_db + 10) * _dpm + 4 }}" font-size="10" fill="#334155"
-                            text-anchor="end">{{ _db }}</text>
-                        {% endfor %}
-
-                        {% for _i in range(4) %}
-                        <line x1="{{ _cx[_i] }}" y1="42" x2="{{ _cx[_i] }}" y2="288" stroke="#ccd6e2"
-                            stroke-width="0.6" />
-                        {% endfor %}
-
-                        <rect x="72" y="42" width="300" height="246" fill="none" stroke="#b8c4d2" stroke-width="1" />
-
-                        <text x="72" y="305" font-size="10" fill="#334155" text-anchor="middle">500</text>
-                        <text x="172" y="305" font-size="10" fill="#334155" text-anchor="middle">1000</text>
-                        <text x="272" y="305" font-size="10" fill="#334155" text-anchor="middle">2000</text>
-                        <text x="372" y="305" font-size="10" fill="#334155" text-anchor="middle">4000</text>
-
-                        <text x="385" y="66" font-size="10" fill="#22a447">Normal</text>
-                        <text x="385" y="108" font-size="10" fill="#d99a18">Mild</text>
-                        <text x="385" y="142" font-size="10" fill="#f07825">Moderate</text>
-                        <text x="385" y="176" font-size="10" fill="#e45683">Mod. Severe</text>
-                        <text x="385" y="216" font-size="10" fill="#d9469b">Severe</text>
-                        <text x="385" y="263" font-size="10" fill="#8b5cf6">Profound</text>
-
-                        <polyline
-                            points="{{ _cx[0] }},{{ _ct + (right_values[_freqs[0]] + 10) * _dpm }} {{ _cx[1] }},{{ _ct + (right_values[_freqs[1]] + 10) * _dpm }} {{ _cx[2] }},{{ _ct + (right_values[_freqs[2]] + 10) * _dpm }} {{ _cx[3] }},{{ _ct + (right_values[_freqs[3]] + 10) * _dpm }}"
-                            fill="none" stroke="#ef4444" stroke-width="2" />
-                        <polyline
-                            points="{{ _cx[0] }},{{ _ct + (left_values[_freqs[0]] + 10) * _dpm }} {{ _cx[1] }},{{ _ct + (left_values[_freqs[1]] + 10) * _dpm }} {{ _cx[2] }},{{ _ct + (left_values[_freqs[2]] + 10) * _dpm }} {{ _cx[3] }},{{ _ct + (left_values[_freqs[3]] + 10) * _dpm }}"
-                            fill="none" stroke="#3b82f6" stroke-width="2" />
-
-                        {% for _i in range(4) %}
-                        <circle cx="{{ _cx[_i] }}" cy="{{ _ct + (right_values[_freqs[_i]] + 10) * _dpm }}" r="4.5"
-                            fill="white" stroke="#ef4444" stroke-width="2" />
-                        {% set _lx = _cx[_i] %}
-                        {% set _ly = _ct + (left_values[_freqs[_i]] + 10) * _dpm %}
-                        <line x1="{{ _lx - 5 }}" y1="{{ _ly - 5 }}" x2="{{ _lx + 5 }}" y2="{{ _ly + 5 }}"
-                            stroke="#3b82f6" stroke-width="2" />
-                        <line x1="{{ _lx - 5 }}" y1="{{ _ly + 5 }}" x2="{{ _lx + 5 }}" y2="{{ _ly - 5 }}"
-                            stroke="#3b82f6" stroke-width="2" />
-                        {% endfor %}
-
-                        <circle cx="202" cy="288" r="4" fill="white" stroke="#ef4444" stroke-width="2" />
-                        <text x="212" y="292" font-size="10" fill="#172033">Right Ear</text>
-                        <line x1="278" y1="283" x2="288" y2="293" stroke="#3b82f6" stroke-width="2" />
-                        <line x1="288" y1="283" x2="278" y2="293" stroke="#3b82f6" stroke-width="2" />
-                        <text x="296" y="292" font-size="10" fill="#172033">Left Ear</text>
-                    </svg>
-                </div>
-            </td>
+            </div>
+        </td>
         </tr>
 
         <tr>
@@ -685,12 +815,16 @@
                             <td>
                                 <div class="ear-label-left">Left PTA</div>
                                 <div class="pta-number-left">{{ "%.1f"|format(left_pta) }} dB</div>
-                                <span class="status-pill">{{ left_status }}</span>
+                                <span class="status-pill {{ left_pill_class }}">
+                                    {{ left_status }}
+                                </span>
                             </td>
                             <td>
                                 <div class="ear-label-right">Right PTA</div>
                                 <div class="pta-number-right">{{ "%.1f"|format(right_pta) }} dB</div>
-                                <span class="status-pill">{{ right_status }}</span>
+                                <span class="status-pill {{ right_pill_class }}">
+                                    {{ right_status }}
+                                </span>
                             </td>
                         </tr>
                     </table>
@@ -728,52 +862,73 @@
                 </div>
             </td>
         </tr>
-    </table>
+        </table>
 
-    <div class="interpretation">
-        <table class="interpretation-table">
+        <div class="interpretation">
+
+            <div style="
+        font-size:16px;
+        font-weight:700;
+        color:#123d86;
+        margin-bottom:12px;
+    ">
+                Interpretation
+            </div>
+
+            {% for line in summary_lines %}
+            <div style="
+        display:flex;
+        align-items:center;
+        margin-bottom:10px;
+        font-size:14px;
+        color:#1f2937;
+    ">
+                <span class="check {{ score_level }}">
+                    &#10003;
+                </span>
+
+                <span style="margin-left:10px;">
+                    {{ line }}
+                </span>
+            </div>
+            {% endfor %}
+
+        </div>
+
+        {% if wrs_completed %}
+        <div class="page-break"></div>
+
+        <h1 class="wrs-title">Word Recognition Report</h1>
+
+        <table class="meta-row">
             <tr>
-                <td><span class="interp-icon">R</span></td>
-                {% for line in summary_lines %}
-                <td><span class="check">&#10003;</span>{{ line }}</td>
-                {% endfor %}
+                <td><strong>Name:</strong> {{ user_data.name }}</td>
+                <td><strong>Language:</strong> {{ wrs_language|upper }}</td>
+                <td><strong>Date:</strong> {{ date_time }}</td>
+                <td><strong>Score:</strong> {{ correct_answers }}/{{ total_words }} ({{ wrs_percentage }}%)</td>
             </tr>
         </table>
-    </div>
 
-    {% if wrs_completed %}
-    <div class="page-break"></div>
-
-    <h1 class="wrs-title">Word Recognition Report</h1>
-
-    <table class="meta-row">
-        <tr>
-            <td><strong>Name:</strong> {{ user_data.name }}</td>
-            <td><strong>Language:</strong> {{ wrs_language|upper }}</td>
-            <td><strong>Date:</strong> {{ date_time }}</td>
-            <td><strong>Score:</strong> {{ correct_answers }}/{{ total_words }} ({{ wrs_percentage }}%)</td>
-        </tr>
-    </table>
-
-    <table class="wrs-table">
-        <tr>
-            <th>#</th>
-            <th>User Selected</th>
-            <th>Expected</th>
-            <th>Result</th>
-        </tr>
-        {% for row in wrs_detailed_rows %}
-        <tr class="{{ 'wrs-row-correct' if row.is_correct else 'wrs-row-wrong' }}">
-            <td style="text-align:center;">{{ row.index }}</td>
-            <td>{{ row.selected_word if row.selected_word else "Not selected" }}</td>
-            <td>{{ row.correct_word if row.correct_word else row.prompt_word }}</td>
-            <td class="{{ 'wrs-result-correct' if row.is_correct else 'wrs-result-wrong' }}" style="text-align:center;">
-                {{ "Correct" if row.is_correct else "Incorrect" }}
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% endif %}
+        <table class="wrs-table">
+            <tr>
+                <th>#</th>
+                <th>User Selected</th>
+                <th>Expected</th>
+                <th>Result</th>
+            </tr>
+            {% for row in wrs_detailed_rows %}
+            <tr class="{{ 'wrs-row-correct' if row.is_correct else 'wrs-row-wrong' }}">
+                <td style="text-align:center;">{{ row.index }}</td>
+                <td>{{ row.selected_word if row.selected_word else "Not selected" }}</td>
+                <td>{{ row.correct_word if row.correct_word else row.prompt_word }}</td>
+                <td class="{{ 'wrs-result-correct' if row.is_correct else 'wrs-result-wrong' }}"
+                    style="text-align:center;">
+                    {{ "Correct" if row.is_correct else "Incorrect" }}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
 </body>
 
 </html>

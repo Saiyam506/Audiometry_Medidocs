@@ -346,11 +346,12 @@ def hearing_report(req: HearingReportRequest):
         logger.exception(
             "PDF generation failed; wkhtmltopdf may be missing or failed.")
     finally:
-        if temp_pdf_path and os.path.exists(temp_pdf_path):
-            os.remove(temp_pdf_path)
+        pass
+        # if temp_pdf_path and os.path.exists(temp_pdf_path):
+        #     os.remove(temp_pdf_path)
 
-        if temp_html_path and os.path.exists(temp_html_path):
-            os.remove(temp_html_path)
+        # if temp_html_path and os.path.exists(temp_html_path):
+        #     os.remove(temp_html_path)
 
     return HearingReportResponse(
         pdf_base64=pdf_b64,
