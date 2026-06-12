@@ -61,6 +61,18 @@
             border-collapse: collapse;
         }
 
+        .user-data-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .user-data-table td {
+            border: 1px solid #000;
+            padding: 6px;
+            vertical-align: middle;
+            font-size: 18px;
+        }
+
         .header-table td {
             vertical-align: top;
         }
@@ -214,8 +226,8 @@
 
         .bar-fill {
             height: 15px;
+            background: #169b43;
             border-radius: 999px;
-            background: linear-gradient(90deg, #169b43, #18aa4b);
         }
 
         .bar-labels {
@@ -515,54 +527,51 @@
     {% set _ct = 42 %}
     {% set _dpm = 2.05 %}
 
-    <div class="top-header">
-        <div class="brand-header">
-            <div class="brand-copy">
-                <strong>Healthcare at Medidocs Pvt Ltd</strong>
-                info@medidocs.in | +91 6366677010<br />
-                1st floor, 27th Cross Rd, 6th Block,<br />
-                Jayanagar, Bengaluru, Karnataka 560011
-            </div>
-            <div class="logo-stack">
-                <img src="{{ nabl_logo }}" class="logo-img" alt="NABL Logo" />
-                <img src="{{ medilabs_logo }}" class="logo-img" alt="Medilabs Logo" />
-            </div>
-        </div>
-
-        <div class="patient-card">
-            <div class="patient-card-title">Patient Information</div>
-            <table class="patient-grid">
-                <tr>
-                    <td><strong>UHID:</strong> {{ user_data.uhid }}</td>
-                    <td><strong>Name:</strong> {{ user_data.name }}</td>
-                    <td><strong>Age:</strong> {{ user_data.age }}</td>
-                </tr>
-                <tr>
-                    <td><strong>Gender:</strong> {{ user_data.gender }}</td>
-                    <td><strong>Mobile:</strong> {{ user_data.mobile }}</td>
-                    <td><strong>Blood Group:</strong> {{ user_data.blood }}</td>
-                </tr>
-                <tr>
-                    <td><strong>Emp ID:</strong> {{ user_data.emp_id }}</td>
-                    <td><strong>Kit No:</strong> {{ user_data.kit_no }}</td>
-                    <td><strong>Date:</strong> {{ date_time }}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div class="report-title">
-        <span class="title-mark">-|||--</span>Audiometry Report<span class="title-mark">--|||-</span>
-    </div>
-
-    <table class="meta-row">
+    <table width="100%" style="border-collapse: collapse;">
         <tr>
-            <td><strong>Name:</strong> {{ user_data.name }}</td>
-            <td><strong>Age:</strong> {{ user_data.age }}</td>
-            <td><strong>Gender:</strong> {{ user_data.gender }}</td>
-            <td><strong>Date:</strong> {{ date_time }}</td>
+            <td style="width: 50%; vertical-align: top; font-size: 20px;">
+                Healthcare at Medidocs Pvt Ltd<br>
+                info@medidocs.in | +91 6366677010<br>
+                1<sup>st</sup> floor, 27<sup>th</sup> Cross Rd, 6<sup>th</sup> Block,<br />
+                Jayanagar,<br />
+                Bengaluru, Karnataka 560011
+            </td>
+
+            <td style="width: 25%; text-align: center; vertical-align: top;">
+                <img src="{{ nabl_logo }}" width="120px">
+            </td>
+
+            <td style="width: 25%; text-align: right; vertical-align: top;">
+                <img src="{{ medilabs_logo }}" width="250px">
+            </td>
         </tr>
     </table>
+
+    <div style="height: 20px;"></div>
+
+    <table class="user-data-table">
+        <tr>
+            <td>UHID: {{ user_data.uhid }}</td>
+            <td colspan="3">Name: {{ user_data.name }}</td>
+        </tr>
+        <tr>
+            <td>Mobile: {{ user_data.mobile }}</td>
+            <td>Blood Group: {{ user_data.blood }}</td>
+            <td>Age: {{ user_data.age }}</td>
+            <td>Gender: {{ user_data.gender }}</td>
+        </tr>
+        <tr>
+            <td>Emp ID: {{ user_data.emp_id }}</td>
+            <td>Kit No: {{ user_data.kit_no }}</td>
+            <td colspan="2">Date: {{ date_time }}</td>
+        </tr>
+    </table>
+
+    <div style="height: 10px;"></div>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h1 style="margin: 0;">Audiometry Report</h1>
+    </div>
 
     <table class="layout">
         <tr>
@@ -571,9 +580,12 @@
                     <div class="score-label">Overall Hearing Score</div>
                     <div class="score-number">{{ _score }}</div>
                     <div class="score-status">{{ _status }}</div>
-                    <div class="bar-bg">
-                        {{ score_bar_html|safe }}
-                    </div>
+                    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td width="{{ _score }}%" style="background:#169b43; height:15px;"></td>
+                            <td width="{{ 100 - _score }}%" style="background:#e8edf3;"></td>
+                        </tr>
+                    </table>
                     <table class="bar-labels">
                         <tr>
                             <td style="text-align:left;">0</td>
